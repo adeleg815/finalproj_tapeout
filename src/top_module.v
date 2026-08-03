@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module tt_um_top_module(
+module top_module(
     input clk,
     input reset,
     
