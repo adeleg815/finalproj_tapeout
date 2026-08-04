@@ -13,14 +13,14 @@ This project is a custom VGA display engine featuring a movable character block 
 
 ## How to test
 
-1. Ensure the master clock is active and the rst_n reset pin is held high (1) to run normally.
+1. Ensure the master clock is active and the rst_n reset pin is held high to run normally.
 2. Monitor the hsync and vsync output lines on an oscilloscope or video breakout adapter to verify active VGA video signaling.
 3. Toggle the button input bits inside the ui_in bus to change the character direction: bit 0 for Up, bit 1 for Down, bit 2 for Left, and bit 3 for Right.
-4. Toggle input bit 4 (the switch pin) to change the character's movement velocity between slow and fast states.
+4. Toggle input of the switch to change the character's movement velocity between slow and fast states.
 5. Observe the uo_out output pins to verify that the color data bits shift dynamically when directional buttons are pressed.
 
 ## External hardware
 
-- Standard digital pushbuttons for directional inputs (connected to ui_in[3:0]).
-- A toggle switch for speed modification (connected to ui_in[4]).
-- A 2-bit TinyTapeout VGA PMOD or custom resistor-ladder breakout board connected to the 8 output pins (uo_out) to interface with a standard VGA monitor display.
+- Standard digital pushbuttons for directional input.
+- A toggle switch for speed modification.
+- A VGA monitor display.
