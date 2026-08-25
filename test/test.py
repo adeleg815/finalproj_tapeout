@@ -10,7 +10,7 @@ async def test_project(dut):
     dut._log.info("Starting TinyTapeout Functional Simulation Check...")
 
     # 1. Initialize a 25ns period clock (matching your 40 MHz info.yaml configuration)
-    clock = Clock(dut.clk, 25, unit="ns")
+    clock = Clock(dut.clk, 10, unit="ns")
     cocotb.start_soon(clock.start())
 
     # 2. Boot up inside an active reset state (0 means reset for our active-low wrapper)
